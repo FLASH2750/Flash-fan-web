@@ -4,24 +4,38 @@
 
 
 body { 
+    background-image: url('recursos/Background.jpg');
+}
+
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.con_titulo {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
     
-    background-color: #f7cc0c; 
-    background-image: url('https://i.pinimg.com/564x/af/fe/12/affe1261893f932c4fd01fecd3f90ea4.jpg');
+    align-items: center;
+    justify-content: center;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-}
 
-.Con_Fl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 35px;
-    margin: 20px auto;
+.flash_logo_titulo {
+    position:absolute;
+    transform: rotate(22deg);
+    margin-left: 70%;
+    height: auto;
+    width: 13%;
+    
+    
 }
 
 p, h2, ol {
@@ -36,62 +50,64 @@ p, h2, ol {
 }
 
 .Info{
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: rgba(150, 150, 150, 0.8);
     border-radius: 10px;
-    padding: 20px;
 }
 
-.FLASH {
+.titulo::before { 
+    animation: aparecer 1.4s 1 ease-in-out;
+}
+
+
+.titulo { 
+    position:relative;
+
+    font-size: 700%;
+  
+    width: fit-content;
     font-family: 'Faster One';
-    color: #d7bf0f;
-    letter-spacing: 0.35em;
-    text-shadow: 2px 2px 4px #790c0c;
-    font-size: 110px;
-    margin-bottom: 25px;
-    margin: auto;
-    position: relative;
-    animation: flash-flicker 1.4s 1 ease-in-out;
-}
-
-.FLASH::before{
-    content: 'THE FLASH';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em;
-    color: #f4ecb4;
-    text-shadow: 0 0 14px #efe18e, 0 0 30px #991515;
-    opacity: 0;
-    animation: thunder-strike 0.3s 1 ease-in-out;
+    color: #f4d523;
+    letter-spacing: 0.36em;
+    text-shadow: 2px 2px 4px #000000;
+    
+    /*animation: aparecer 1.4s 1 ease-in-out;*/
 }
 
 
-@keyframes flash-flicker {
-    0%, 100% { text-shadow: 2px 2px 4px #790c0c; color: #d7bf0f; }
-    15% { text-shadow: 0 0 18px #fff, 0 0 30px #ffe66d; color: #ffffff; }
-    30% { text-shadow: 0 0 10px #fff, 0 0 20px #f9d50d; color: #f8f8f2; }
-    45% { text-shadow: 2px 2px 4px #790c0c; color: #d7bf0f; }
+.titulo:hover {
+    animation: flash-effect 1.4s 1 ease-in;
 }
 
-@keyframes thunder-strike {
-    0%, 80%, 100% { opacity: 0; transform: translateY(-50%) scale(0.9); }
-    40% { opacity: 1; transform: translateY(-50%) scale(1.1); }
-    50% { opacity: 0; transform: translateY(-50%) scale(1.2); }
+
+@keyframes flash-effect {
+    0%, 100% { text-shadow: 2px 2px 4px #000000; color: #f4d523; }
+    10% { text-shadow: 0 0 18px #fff, 0 0 30px #ffe66d; color: #ffffff; }
+    60% { text-shadow: 2px 2px 4px #000000; color: #f4d523; }
 }
+/* Animacion en progreso
+@keyframes aparecer {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.9); }
+    40% { opacity: 0.5; transform: translateX(25%) scale(1); text-shadow: 0 0 18px #fff, 0 0 30px #ffe66d; color: #ffffff; }    
+    50% { opacity: 1; transform: translateX(0%) scale(1.03); }
+    95% { text-shadow: 2px 2px 4px #000000; color: #f4d523; }
+}
+*/
 
 
 .medio {
     background-color: rgba(2, 2, 2, 0.8); 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: auto;
     padding: 20px;
     border-radius: 10px;
-    width: 75%;
+    
 
 }
+
 
 .FLASH_WALLY {
     width: 275px;
