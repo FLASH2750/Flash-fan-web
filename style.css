@@ -29,14 +29,15 @@ body {
 
 
 .flash_logo_titulo {
-    position:absolute;
+    position:relative;
     transform: rotate(22deg);
-    margin-left: 70%;
     height: auto;
     width: 13%;
-    
-    
+    filter:drop-shadow(5px 5px 3px #000000);
+    pointer-events: none;
 }
+
+
 
 p, h2, ol {
     color: rgb(255, 255, 255);
@@ -51,33 +52,41 @@ p, h2, ol {
 
 .Info{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
     background-color: rgba(150, 150, 150, 0.8);
     border-radius: 10px;
 }
 
-.titulo::before { 
-    animation: aparecer 1.4s 1 ease-in-out;
+.medio {
+    background-color: rgba(2, 2, 2, 0.8); 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    
+
 }
 
+div{
+  margin: 1%;
+}
 
 .titulo { 
     position:relative;
-
     font-size: 700%;
-  
     width: fit-content;
     font-family: 'Faster One';
     color: #f4d523;
     letter-spacing: 0.36em;
     text-shadow: 2px 2px 4px #000000;
-    
+    transition: all 0.3s ease-in-out;
     /*animation: aparecer 1.4s 1 ease-in-out;*/
 }
 
 
 .titulo:hover {
+    
     animation: flash-effect 1.4s 1 ease-in;
 }
 
@@ -95,19 +104,6 @@ p, h2, ol {
     95% { text-shadow: 2px 2px 4px #000000; color: #f4d523; }
 }
 */
-
-
-.medio {
-    background-color: rgba(2, 2, 2, 0.8); 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    
-
-}
-
 
 .FLASH_WALLY {
     width: 275px;
